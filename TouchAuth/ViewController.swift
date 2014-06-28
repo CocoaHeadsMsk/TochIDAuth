@@ -12,11 +12,13 @@ class ViewController: UIViewController {
     
     @IBOutlet var tapMeButton:UIButton
     @IBOutlet var backgroundImageView:UIImageView
+    @IBOutlet var registrationView:UIView
     var animator: UIDynamicAnimator?
     var buttonBounds: CGRect?
                             
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.registrationView.alpha = 0;
         buttonBounds = tapMeButton.bounds
         let accounts:NSURLCredentialStorage! = NSURLCredentialStorage.sharedCredentialStorage();
         if accounts.allCredentials.objectForKey("OurTestService") == nil {
@@ -52,17 +54,16 @@ class ViewController: UIViewController {
         if sender.tag == 2 {
 //            processingAuthentification()
         } else {
-//           processingRegistration()
+            self.processingRegistration()
         }
     }
     
-//    func processingAuthentification() {
-//        self.performSegueWithIdentifier("processingAuthentification" , sender: self)
-//    }
-//    
-//    func processingRegistration() {
-//       self.performSegueWithIdentifier("processingRegistration", sender: self)
-//    }
+    func processingRegistration() {
+        UIView.animateWithDuration(2.6, animations: {
+            self.tapMeButton.alpha = 0
+            self.registrationView.alpha = 1
+            })
+    }
     
     
 
