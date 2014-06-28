@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Accounts
 
 class ViewController: UIViewController {
     @IBOutlet var tapMeButton:UIButton
@@ -22,11 +21,6 @@ class ViewController: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func tapMeButtonTap(sender:UIButton) {
         if sender.titleLabel.text == "Sign In" {
             processingAuthentification()
@@ -36,11 +30,11 @@ class ViewController: UIViewController {
     }
     
     func processingAuthentification() {
-        
+        self.performSegueWithIdentifier("processingAuthentification" , sender: self)
     }
     
     func processingRegistration() {
-        
+       self.performSegueWithIdentifier("processingRegistration", sender: self)
     }
     
     
