@@ -16,13 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4z-cO-rCZ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="QN1-7A-2Po">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="640"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4z-cO-rCZ">
+                                <rect key="frame" x="-100" y="-50" width="200" height="100"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="signin">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="100" y="294" width="121" height="30"/>
+                                    <rect key="frame" x="110" y="295" width="100" height="50"/>
                                 </variation>
                                 <connections>
                                     <action selector="tapMeButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6n-rS-ggv"/>
@@ -33,11 +40,13 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="QN1-7A-2Po"/>
                                 <exclude reference="l4z-cO-rCZ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
+                                <include reference="QN1-7A-2Po"/>
                                 <include reference="l4z-cO-rCZ"/>
                             </mask>
                         </variation>
@@ -60,6 +69,7 @@
                         <viewControllerLayoutGuide type="bottom" id="nma-oA-ObG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mo5-P4-bWf">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WeR-BJ-E5u">
@@ -131,6 +141,7 @@
                         <viewControllerLayoutGuide type="bottom" id="gpk-7S-sG2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i2T-KL-Slj">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Z3a-pv-Tl2">
@@ -184,5 +195,6 @@
     </scenes>
     <resources>
         <image name="background" width="326" height="581"/>
+        <image name="signin" width="200" height="100"/>
     </resources>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B703FC38195F3220008EF73D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B703FC37195F3220008EF73D /* RegistrationViewController.swift */; };
+		B84293E2195F3EF2000D161A /* PositionToBoundsMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84293E1195F3EF2000D161A /* PositionToBoundsMapping.swift */; };
 		B8540796195EEECD000EB420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8540795195EEECD000EB420 /* AppDelegate.swift */; };
 		B8540798195EEECD000EB420 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8540797195EEECD000EB420 /* ViewController.swift */; };
 		B854079B195EEECD000EB420 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8540799195EEECD000EB420 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		B703FC37195F3220008EF73D /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		B84293E1195F3EF2000D161A /* PositionToBoundsMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionToBoundsMapping.swift; sourceTree = "<group>"; };
 		B8540790195EEECD000EB420 /* TouchAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8540794195EEECD000EB420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8540795195EEECD000EB420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		B8540792195EEECD000EB420 /* TouchAuth */ = {
 			isa = PBXGroup;
 			children = (
+				B84293E1195F3EF2000D161A /* PositionToBoundsMapping.swift */,
 				B8540795195EEECD000EB420 /* AppDelegate.swift */,
 				B8540797195EEECD000EB420 /* ViewController.swift */,
 				B8540799195EEECD000EB420 /* Main.storyboard */,
@@ -214,6 +217,7 @@
 				B703FC38195F3220008EF73D /* RegistrationViewController.swift in Sources */,
 				B8540798195EEECD000EB420 /* ViewController.swift in Sources */,
 				B8540796195EEECD000EB420 /* AppDelegate.swift in Sources */,
+				B84293E2195F3EF2000D161A /* PositionToBoundsMapping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
