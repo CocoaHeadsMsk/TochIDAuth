@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var tapMeButton:UIButton
+    @IBOutlet var backgroundImageView:UIImageView
     var animator: UIDynamicAnimator?
     var buttonBounds: CGRect?
                             
@@ -25,6 +26,10 @@ class ViewController: UIViewController {
             self.tapMeButton.setImage(UIImage(named:"signin"), forState:UIControlState.Normal)
             self.tapMeButton.tag = 2;
         }
+        
+        let blur = UIVisualEffectView(effect:UIBlurEffect(style:.Light)) as UIVisualEffectView
+        blur.frame = self.view.bounds
+        self.backgroundImageView.addSubview(blur)
     }
 
     @IBAction func tapMeButtonTap(sender:UIButton) {
@@ -45,19 +50,19 @@ class ViewController: UIViewController {
         
         self.animator = animator
         if sender.tag == 2 {
-            processingAuthentification()
+//            processingAuthentification()
         } else {
-           processingRegistration()
+//           processingRegistration()
         }
     }
     
-    func processingAuthentification() {
-        self.performSegueWithIdentifier("processingAuthentification" , sender: self)
-    }
-    
-    func processingRegistration() {
-       self.performSegueWithIdentifier("processingRegistration", sender: self)
-    }
+//    func processingAuthentification() {
+//        self.performSegueWithIdentifier("processingAuthentification" , sender: self)
+//    }
+//    
+//    func processingRegistration() {
+//       self.performSegueWithIdentifier("processingRegistration", sender: self)
+//    }
     
     
 
