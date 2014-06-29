@@ -1,4 +1,4 @@
 AccountAndTouch
 ===============
 
-Использование фреймворков: ACAccount и LocalAuthentication
+Использование фреймворков: ACAccount и LocalAuthentication,

@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         self.registrationView.alpha = 0;
         self.signInButton.alpha = 0;
         buttonBounds = tapMeButton.bounds
+        self.backgroundImageView.addMotionEffect(self.motionEffect())
         let account:NSURLCredentialStorage! = NSURLCredentialStorage.sharedCredentialStorage();
         if account.defaultCredentialForProtectionSpace(self.protectionSpace.space) == nil {
             self.tapMeButton.setImage(UIImage(named:"join"), forState: UIControlState.Normal)
@@ -37,6 +38,22 @@ class ViewController: UIViewController {
         let blur = UIVisualEffectView(effect:UIBlurEffect(style:.Light)) as UIVisualEffectView
         blur.frame = self.view.bounds
         self.backgroundImageView.addSubview(blur)
+    }
+    
+    func motionEffect() -> UIMotionEffectGroup
+    {
+        var xAxis :UIInterpolatingMotionEffect! = UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongHorizontalAxis)
+        xAxis.minimumRelativeValue = -30.0
+        xAxis.maximumRelativeValue = 30.0
+        
+        var yAxis :UIInterpolatingMotionEffect! = UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        yAxis.minimumRelativeValue = -15.0;
+        yAxis.maximumRelativeValue = 15.0;
+        
+        var foregroundViewMotionEffect: UIMotionEffectGroup = UIMotionEffectGroup()
+        foregroundViewMotionEffect.motionEffects = [xAxis, yAxis]
+        
+        return foregroundViewMotionEffect
     }
 
     @IBAction func tapMeButtonTap(sender:UIButton) {
