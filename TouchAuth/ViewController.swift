@@ -171,6 +171,11 @@ class RegistrationViewController:UIViewController, UITextFieldDelegate {
         self.passwordTextField.resignFirstResponder()
     }
     
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        self.tapOnView()
+        return true;
+    }
+    
     func textFieldDidEndEditing(textField: UITextField!) {
         self.source.validateTextField()
     }
