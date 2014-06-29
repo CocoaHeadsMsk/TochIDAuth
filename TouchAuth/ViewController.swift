@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     }
     
     func processingRegistration() {
-        UIView.animateWithDuration(2.6, animations: {
+        UIView.animateWithDuration(1.0, animations: {
             self.tapMeButton.alpha = 0
             self.registrationView.alpha = 1
             })
@@ -68,5 +68,59 @@ class ViewController: UIViewController {
     
 
 
+}
+
+class RegistrationViewController:UIViewController {
+    
+    @IBOutlet var repeatPassword:       UITextField
+    @IBOutlet var loginTextField:       UITextField
+    @IBOutlet var passwordTextField:    UITextField
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    @IBAction func loginTextFielBeginEditing(sender:UITextField) {
+        self.repeatPassword.transform = CGAffineTransformMakeTranslation(0, -25)
+        self.loginTextField.transform = CGAffineTransformMakeTranslation(0, -25)
+        self.passwordTextField.transform = CGAffineTransformMakeTranslation(0, -25)
+    }
+    
+    @IBAction func loginTextFieldEndEditing(sender:UITextField) {
+        self.repeatPassword.transform = CGAffineTransformMakeTranslation(0, 0)
+        self.loginTextField.transform = CGAffineTransformMakeTranslation(0, 0)
+        self.passwordTextField.transform = CGAffineTransformMakeTranslation(0, 0)
+    }
+    
+    @IBAction func passwordTextFieldBeginEditing(sender:UITextField) {
+        self.repeatPassword.transform = CGAffineTransformMakeTranslation(0, -85)
+        self.loginTextField.transform = CGAffineTransformMakeTranslation(0, -85)
+        self.passwordTextField.transform = CGAffineTransformMakeTranslation(0, -85)
+    }
+    
+    @IBAction func passwordTextFieldEndEditing(sender:UITextField) {
+       self.repeatPassword.transform = CGAffineTransformMakeTranslation(0, 0)
+        self.loginTextField.transform = CGAffineTransformMakeTranslation(0, 0)
+        self.passwordTextField.transform = CGAffineTransformMakeTranslation(0, 0)
+    }
+    
+    @IBAction func repeatPasswordTextFieldBeginEditing(sender:UITextField) {
+        self.repeatPassword.transform = CGAffineTransformMakeTranslation(0, -145)
+        self.loginTextField.transform = CGAffineTransformMakeTranslation(0, -145)
+        self.passwordTextField.transform = CGAffineTransformMakeTranslation(0, -145)
+    }
+    
+    @IBAction func repeatPasswordTextFieldEndEditing(sender:UITextField) {
+        self.repeatPassword.transform = CGAffineTransformMakeTranslation(0, 0)
+        self.loginTextField.transform = CGAffineTransformMakeTranslation(0, 0)
+        self.passwordTextField.transform = CGAffineTransformMakeTranslation(0, 0)
+    }
+    
+    @IBAction func tapOnView() {
+        self.repeatPassword.resignFirstResponder()
+        self.loginTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+    }
 }
 

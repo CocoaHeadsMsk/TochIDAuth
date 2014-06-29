@@ -19,6 +19,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="QN1-7A-2Po">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="1" green="0.57074579657746016" blue="0.33598947469775187" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="640"/>
                                 </variation>
@@ -40,7 +41,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="335" width="320" height="151"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="489"/>
                                 </variation>
                                 <connections>
                                     <segue destination="VMp-nJ-ABk" kind="embed" id="sJT-xv-vBY"/>
@@ -74,106 +75,10 @@
             </objects>
             <point key="canvasLocation" x="-63" y="105"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="UZI-wm-qVQ">
-            <objects>
-                <viewController id="lLZ-3z-PSY" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="O9z-FK-oF3"/>
-                        <viewControllerLayoutGuide type="bottom" id="nma-oA-ObG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mo5-P4-bWf">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WeR-BJ-E5u">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-6" y="0.0" width="356" height="640"/>
-                                </variation>
-                            </imageView>
-                        </subviews>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="WeR-BJ-E5u"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="WeR-BJ-E5u"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xCH-gr-Dam" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1375.5" y="-230.25"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="iDB-qL-Q2Z">
-            <objects>
-                <viewController id="SwV-wg-fqG" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kZG-ih-3PE"/>
-                        <viewControllerLayoutGuide type="bottom" id="gpk-7S-sG2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="i2T-KL-Slj">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Z3a-pv-Tl2">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-18" y="0.0" width="343" height="648"/>
-                                </variation>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLE-hX-Ir7">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="411" width="320" height="45"/>
-                                </variation>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LOGIN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9AI-eV-9pi">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="352" width="320" height="45"/>
-                                </variation>
-                            </textField>
-                        </subviews>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Z3a-pv-Tl2"/>
-                                <exclude reference="SLE-hX-Ir7"/>
-                                <exclude reference="9AI-eV-9pi"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="Z3a-pv-Tl2"/>
-                                <include reference="SLE-hX-Ir7"/>
-                                <include reference="9AI-eV-9pi"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5VH-ry-o3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1375.5" y="288"/>
-        </scene>
-        <!--View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="eyD-ji-KcN">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="VMp-nJ-ABk" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="VMp-nJ-ABk" customClass="RegistrationViewController" customModule="TouchAuth" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tv9-e0-4lI"/>
                         <viewControllerLayoutGuide type="bottom" id="TpU-kg-o2M"/>
@@ -181,59 +86,85 @@
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8n0-ZS-Qkr">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6V-cO-dxR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkt-qd-ki6">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="107" width="320" height="45"/>
+                                    <rect key="frame" x="0.0" y="386" width="320" height="45"/>
                                 </variation>
+                                <connections>
+                                    <action selector="passwordTextFieldBeginEditing:" destination="VMp-nJ-ABk" eventType="editingDidBegin" id="idx-va-OTH"/>
+                                    <action selector="passwordTextFieldEndEditing:" destination="VMp-nJ-ABk" eventType="editingDidEnd" id="KZ1-Aa-CQR"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-MAIL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NEa-6m-6KY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LOGIN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NEa-6m-6KY">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="3" width="320" height="45"/>
+                                    <rect key="frame" x="0.0" y="326" width="320" height="45"/>
                                 </variation>
+                                <connections>
+                                    <action selector="loginTextFielBeginEditing:" destination="VMp-nJ-ABk" eventType="editingDidBegin" id="3sl-il-6HZ"/>
+                                    <action selector="loginTextFieldEndEditing:" destination="VMp-nJ-ABk" eventType="editingDidEnd" id="3Nk-JQ-kpQ"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LOGIN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jkt-qd-ki6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="RE-ENTER PASSWORD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6V-cO-dxR">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="55" width="320" height="45"/>
+                                    <rect key="frame" x="0.0" y="446" width="320" height="45"/>
                                 </variation>
+                                <connections>
+                                    <action selector="repeatPasswordTextFieldBeginEditing:" destination="VMp-nJ-ABk" eventType="editingDidBegin" id="UTV-Ra-fcv"/>
+                                    <action selector="repeatPasswordTextFieldEndEditing:" destination="VMp-nJ-ABk" eventType="editingDidEnd" id="cBN-FD-bC3"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="d6V-cO-dxR"/>
-                                <exclude reference="NEa-6m-6KY"/>
                                 <exclude reference="jkt-qd-ki6"/>
+                                <exclude reference="NEa-6m-6KY"/>
+                                <exclude reference="d6V-cO-dxR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="d6V-cO-dxR"/>
-                                <include reference="NEa-6m-6KY"/>
                                 <include reference="jkt-qd-ki6"/>
+                                <include reference="NEa-6m-6KY"/>
+                                <include reference="d6V-cO-dxR"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0yU-b0-Wvk" appends="YES" id="i70-x3-t5a"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="loginTextField" destination="NEa-6m-6KY" id="6fq-lg-S2I"/>
+                        <outlet property="passwordTextField" destination="jkt-qd-ki6" id="7SX-UT-DTC"/>
+                        <outlet property="repeatPassword" destination="d6V-cO-dxR" id="UWi-OF-ZAs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOU-Lh-bsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0yU-b0-Wvk">
+                    <connections>
+                        <action selector="tapOnView" destination="VMp-nJ-ABk" id="nW2-g6-hvs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="570" y="187.875"/>
+            <point key="canvasLocation" x="606" y="203.625"/>
         </scene>
     </scenes>
     <resources>
