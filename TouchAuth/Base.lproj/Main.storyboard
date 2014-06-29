@@ -24,6 +24,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="640"/>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1G5-cO-RFZ">
+                                <rect key="frame" x="-100" y="-50" width="200" height="100"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="signin">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="110" y="150" width="100" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="tapMeButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HmU-dU-o0Q"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4z-cO-rCZ">
                                 <rect key="frame" x="-100" y="-50" width="200" height="100"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,6 +66,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="QN1-7A-2Po"/>
+                                <exclude reference="1G5-cO-RFZ"/>
                                 <exclude reference="l4z-cO-rCZ"/>
                                 <exclude reference="WvE-gm-4LX"/>
                             </mask>
@@ -60,6 +74,7 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="QN1-7A-2Po"/>
+                                <include reference="1G5-cO-RFZ"/>
                                 <include reference="l4z-cO-rCZ"/>
                                 <include reference="WvE-gm-4LX"/>
                             </mask>
@@ -68,6 +83,7 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="QN1-7A-2Po" id="91u-gy-KQ2"/>
                         <outlet property="registrationView" destination="WvE-gm-4LX" id="dMA-h3-qVQ"/>
+                        <outlet property="signInButton" destination="1G5-cO-RFZ" id="hEl-3t-HwF"/>
                         <outlet property="tapMeButton" destination="l4z-cO-rCZ" id="NRi-nW-X7f"/>
                     </connections>
                 </viewController>

@@ -14,14 +14,16 @@ class ViewController: UIViewController {
     @IBOutlet var tapMeButton:UIButton
     @IBOutlet var backgroundImageView:UIImageView
     @IBOutlet var registrationView:UIView
+    @IBOutlet var signInButton: UIButton
     var animator: UIDynamicAnimator?
     var buttonBounds: CGRect?
-    var registrationVC: RegistrationViewController?
+    var registrationVC: RegistrationViewController!
     let protectionSpace = AppProtectionSpace.sharedInstance()
                             
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registrationView.alpha = 0;
+        self.signInButton.alpha = 0;
         buttonBounds = tapMeButton.bounds
         let account:NSURLCredentialStorage! = NSURLCredentialStorage.sharedCredentialStorage();
         if account.defaultCredentialForProtectionSpace(self.protectionSpace.space) == nil {
@@ -95,9 +97,22 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?)
     {
         if segue?.identifier == "myEmbedFieldSegue" {
-            registrationVC = segue?.destinationViewController as? RegistrationViewController
+            self.registrationVC = segue?.destinationViewController as? RegistrationViewController
+            self.registrationVC.source = self
         }
     }
+    
+    func validateTextField() {
+        if countElements(self.registrationVC.loginTextField.text!) > 3 && countElements(self.registrationVC.passwordTextField.text!) > 3 && self.registrationVC.passwordTextField.text == self.registrationVC.repeatPassword.text {
+            UIView.animateWithDuration(1.0, animations: {
+                self.signInButton.alpha = 1;
+                })
+        }
+    }
+    
+    
+    
+    
 }
 
 class RegistrationViewController:UIViewController, UITextFieldDelegate {
@@ -105,6 +120,7 @@ class RegistrationViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet var repeatPassword:       UITextField
     @IBOutlet var loginTextField:       UITextField
     @IBOutlet var passwordTextField:    UITextField
+    var source: ViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -156,9 +172,11 @@ class RegistrationViewController:UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(textField: UITextField!) {
-        if countElements(self.loginTextField.text!) > 4 && countElements(self.passwordTextField.text!) > 4 && self.passwordTextField.text == self.repeatPassword.text {
-            
-        }
+        self.source.validateTextField()
     }
+
 }
+    
+    
+
 
