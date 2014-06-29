@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class ViewController: UIViewController {
     
@@ -15,13 +16,14 @@ class ViewController: UIViewController {
     @IBOutlet var registrationView:UIView
     var animator: UIDynamicAnimator?
     var buttonBounds: CGRect?
+    let protectionSpace = AppProtectionSpace.sharedInstance()
                             
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registrationView.alpha = 0;
         buttonBounds = tapMeButton.bounds
-        let accounts:NSURLCredentialStorage! = NSURLCredentialStorage.sharedCredentialStorage();
-        if accounts.allCredentials.objectForKey("OurTestService") == nil {
+        let account:NSURLCredentialStorage! = NSURLCredentialStorage.sharedCredentialStorage();
+        if account.defaultCredentialForProtectionSpace(self.protectionSpace.space) == nil {
             self.tapMeButton.setImage(UIImage(named:"join"), forState: UIControlState.Normal)
             self.tapMeButton.tag = 1;
         } else {
@@ -52,7 +54,7 @@ class ViewController: UIViewController {
         
         self.animator = animator
         if sender.tag == 2 {
-//            processingAuthentification()
+            self.processingAuthentification()
         } else {
             self.processingRegistration()
         }
@@ -65,8 +67,28 @@ class ViewController: UIViewController {
             })
     }
     
-    
-
-
+    func processingAuthentification() {
+        var context = LAContext()
+        let myCredential = NSURLCredentialStorage.sharedCredentialStorage().defaultCredentialForProtectionSpace(self.protectionSpace.space)
+        context.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason:"You use login: \(myCredential.user)") {
+            (success: Bool, error: NSError!) -> Void in
+            if success {
+                println("Auth success! LOGIN: \(myCredential.user). PASSWORD: \(myCredential.password)")
+            } else {
+                switch (error.code) {
+                case LAError.AuthenticationFailed.toRaw():
+                    println("Authentication Failed")
+                    
+                case LAError.UserCancel.toRaw():
+                    println("User pressed Cancel button")
+                    
+                case LAError.UserFallback.toRaw():
+                    println("User pressed \"Enter Password\"")
+                    
+                default: break;
+                }
+            }
+        }
+    }
 }
 

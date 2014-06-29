@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B84293E2195F3EF2000D161A /* PositionToBoundsMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84293E1195F3EF2000D161A /* PositionToBoundsMapping.swift */; };
+		B84293E6195FEE71000D161A /* AppProtectionSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84293E5195FEE71000D161A /* AppProtectionSpace.swift */; };
+		B84293E8196000D3000D161A /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84293E7196000D3000D161A /* LocalAuthentication.framework */; };
 		B8540796195EEECD000EB420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8540795195EEECD000EB420 /* AppDelegate.swift */; };
 		B8540798195EEECD000EB420 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8540797195EEECD000EB420 /* ViewController.swift */; };
 		B854079B195EEECD000EB420 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8540799195EEECD000EB420 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		B84293E1195F3EF2000D161A /* PositionToBoundsMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionToBoundsMapping.swift; sourceTree = "<group>"; };
+		B84293E5195FEE71000D161A /* AppProtectionSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppProtectionSpace.swift; sourceTree = "<group>"; };
+		B84293E7196000D3000D161A /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		B8540790195EEECD000EB420 /* TouchAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8540794195EEECD000EB420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8540795195EEECD000EB420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84293E8196000D3000D161A /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +64,7 @@
 		B8540787195EEECD000EB420 = {
 			isa = PBXGroup;
 			children = (
+				B84293E7196000D3000D161A /* LocalAuthentication.framework */,
 				B8540792195EEECD000EB420 /* TouchAuth */,
 				B85407A5195EEECD000EB420 /* TouchAuthTests */,
 				B8540791195EEECD000EB420 /* Products */,
@@ -83,6 +89,7 @@
 				B8540799195EEECD000EB420 /* Main.storyboard */,
 				B854079C195EEECD000EB420 /* Images.xcassets */,
 				B8540793195EEECD000EB420 /* Supporting Files */,
+				B84293E5195FEE71000D161A /* AppProtectionSpace.swift */,
 			);
 			path = TouchAuth;
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 				B8540798195EEECD000EB420 /* ViewController.swift in Sources */,
 				B8540796195EEECD000EB420 /* AppDelegate.swift in Sources */,
 				B84293E2195F3EF2000D161A /* PositionToBoundsMapping.swift in Sources */,
+				B84293E6195FEE71000D161A /* AppProtectionSpace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
