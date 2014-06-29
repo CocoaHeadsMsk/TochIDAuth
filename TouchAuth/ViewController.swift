@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         }
         
         let blur = UIVisualEffectView(effect:UIBlurEffect(style:.Light)) as UIVisualEffectView
-        blur.frame = self.view.bounds
+        blur.frame = CGRectMake(-30, -15, 380, 670);
         self.backgroundImageView.addSubview(blur)
     }
     
