@@ -70,7 +70,7 @@ class ViewController: UIViewController {
 
 }
 
-class RegistrationViewController:UIViewController {
+class RegistrationViewController:UIViewController, UITextFieldDelegate {
     
     @IBOutlet var repeatPassword:       UITextField
     @IBOutlet var loginTextField:       UITextField
@@ -78,7 +78,9 @@ class RegistrationViewController:UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.repeatPassword.delegate = self
+        self.loginTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
     
     @IBAction func loginTextFielBeginEditing(sender:UITextField) {
@@ -121,6 +123,12 @@ class RegistrationViewController:UIViewController {
         self.repeatPassword.resignFirstResponder()
         self.loginTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField!) {
+        if countElements(self.loginTextField.text!) > 4 && countElements(self.passwordTextField.text!) > 4 && self.passwordTextField.text == self.repeatPassword.text {
+            
+        }
     }
 }
 
