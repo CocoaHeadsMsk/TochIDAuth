@@ -24,19 +24,6 @@
                                     <rect key="frame" x="-30" y="-15" width="380" height="670"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4z-cO-rCZ">
-                                <rect key="frame" x="-100" y="-50" width="200" height="100"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="signin">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="504" width="100" height="50"/>
-                                </variation>
-                                <connections>
-                                    <action selector="tapMeButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6n-rS-ggv"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WvE-gm-4LX">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -60,22 +47,36 @@
                                     <action selector="signInTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="87c-lQ-pFu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4z-cO-rCZ">
+                                <rect key="frame" x="-100" y="-50" width="200" height="100"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="signin">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="110" y="450" width="100" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="tapMeButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6n-rS-ggv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="QN1-7A-2Po"/>
-                                <exclude reference="l4z-cO-rCZ"/>
                                 <exclude reference="WvE-gm-4LX"/>
                                 <exclude reference="1G5-cO-RFZ"/>
+                                <exclude reference="l4z-cO-rCZ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="QN1-7A-2Po"/>
-                                <include reference="l4z-cO-rCZ"/>
                                 <include reference="WvE-gm-4LX"/>
                                 <include reference="1G5-cO-RFZ"/>
+                                <include reference="l4z-cO-rCZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -147,6 +148,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="jkt-qd-ki6"/>

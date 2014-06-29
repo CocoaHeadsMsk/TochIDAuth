@@ -36,15 +36,15 @@ class ViewController: UIViewController {
         }
         
         let blur = UIVisualEffectView(effect:UIBlurEffect(style:.Light)) as UIVisualEffectView
-        blur.frame = CGRectMake(-30, -15, 380, 670);
+        blur.frame = CGRectMake(0, 300, 380, 298);
         self.backgroundImageView.addSubview(blur)
     }
     
     func motionEffect() -> UIMotionEffectGroup
     {
         var xAxis :UIInterpolatingMotionEffect! = UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongHorizontalAxis)
-        xAxis.minimumRelativeValue = -30.0
-        xAxis.maximumRelativeValue = 30.0
+        xAxis.minimumRelativeValue = -15.0
+        xAxis.maximumRelativeValue = 15.0
         
         var yAxis :UIInterpolatingMotionEffect! = UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
         yAxis.minimumRelativeValue = -15.0;

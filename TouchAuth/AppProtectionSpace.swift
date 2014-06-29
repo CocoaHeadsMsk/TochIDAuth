@@ -20,7 +20,7 @@ class AppProtectionSpace: NSObject {
         
         dispatch_once(&Static.onceToken) {
             Static.instance = self()
-            Static.instance!.space = NSURLProtectionSpace(host:"round.me", port:0, `protocol`:"http", realm:nil, authenticationMethod:NSURLAuthenticationMethodDefault)
+            Static.instance!.space = NSURLProtectionSpace(host:"new.round.me", port:0, `protocol`:"http", realm:nil, authenticationMethod:NSURLAuthenticationMethodDefault)
         }
         
         return Static.instance!
