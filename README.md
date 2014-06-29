@@ -1,4 +1,5 @@
 AccountAndTouch
 ===============
 
-Использование фреймворков: ACAccount и LocalAuthentication
+Использование фреймворков: NSURLCredential и LocalAuthentication
+Работа с UIDynamic, UIVisualEffects, UIMotion and other.
