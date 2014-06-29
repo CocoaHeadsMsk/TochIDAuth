@@ -44,7 +44,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="489"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="VMp-nJ-ABk" kind="embed" id="sJT-xv-vBY"/>
+                                    <segue destination="VMp-nJ-ABk" kind="embed" identifier="myEmbedFieldSegue" id="sJT-xv-vBY"/>
                                 </connections>
                             </containerView>
                         </subviews>

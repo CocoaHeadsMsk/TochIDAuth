@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet var registrationView:UIView
     var animator: UIDynamicAnimator?
     var buttonBounds: CGRect?
+    var registrationVC: RegistrationViewController?
     let protectionSpace = AppProtectionSpace.sharedInstance()
                             
     override func viewDidLoad() {
@@ -88,6 +89,13 @@ class ViewController: UIViewController {
                 default: break;
                 }
             }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?)
+    {
+        if segue?.identifier == "myEmbedFieldSegue" {
+            registrationVC = segue?.destinationViewController as? RegistrationViewController
         }
     }
 }
