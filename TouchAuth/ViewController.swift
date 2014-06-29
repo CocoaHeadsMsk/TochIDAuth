@@ -172,7 +172,14 @@ class RegistrationViewController:UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        self.tapOnView()
+        if textField == self.loginTextField {
+            self.passwordTextField.becomeFirstResponder()
+        } else if textField == self.passwordTextField {
+            self.repeatPassword.becomeFirstResponder()
+        } else {
+            self.repeatPassword.resignFirstResponder()
+        }
+        
         return true;
     }
     
