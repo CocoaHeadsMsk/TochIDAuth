@@ -63,6 +63,11 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func signInTouch(sender:UIButton) {
+        let myCredential = NSURLCredential(user:self.registrationVC.loginTextField.text, password:self.registrationVC.passwordTextField.text, persistence:NSURLCredentialPersistence.Synchronizable)
+        NSURLCredentialStorage.sharedCredentialStorage().setDefaultCredential(myCredential, forProtectionSpace: self.protectionSpace.space)
+    }
+    
     func processingRegistration() {
         UIView.animateWithDuration(1.0, animations: {
             self.tapMeButton.alpha = 0
